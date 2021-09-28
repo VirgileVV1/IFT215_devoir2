@@ -53,27 +53,85 @@ namespace Labo1_IFT215
             string nom = textBoxName.Text;
             string courriel = textBoxMail.Text;
             string motDePasse = textBoxPassword.Text;
+            bool testSubmit = true;
+            //bool test = false;
 
-            AbonnementItem abonnement = (AbonnementItem)comboBoxSub.SelectedItem;
-            string resume = prenom + " " + nom + " " + courriel + " " +
-                            abonnement.Texte + " à " + abonnement.Valeur + "$.";
-
-
-            //soumission avec code :
-          
-
-            MessageBox.Show(resume);
-
-            //On créé le compte
-            Compte nouveau = new Compte
+            if (!prenom.Equals(""))
             {
-                Prenom = prenom,
-                Nom = nom,
-                Courriel = courriel,
-                MotDePasse = motDePasse,
-                Abonnement = abonnement.ID
-            };
-            comptes.Add(nouveau);
+                testSubmit = true;
+            }
+            else {
+                if (testSubmit)
+                {
+                    testSubmit = false;
+                    MessageBox.Show("Veuillez entrer un prénom");
+                }
+            }
+            if (testSubmit && !nom.Equals(""))
+            {
+                testSubmit = true;
+            }
+            else
+            {
+                if (testSubmit)
+                {
+                    testSubmit = false;
+                    MessageBox.Show("Veuillez entrer un nom");
+                }
+
+            }
+
+            if (testSubmit && IsEmailAddressValid(courriel))
+            {
+                testSubmit = true;
+            }
+            else
+            {
+                if (testSubmit)
+                {
+                    testSubmit = false;
+                    MessageBox.Show("E-Mail invalide");
+                }
+            }
+
+            if (testSubmit && ValidatePassword(motDePasse))
+            {
+                testSubmit = true;
+            }
+            else
+            {
+                if (testSubmit)
+                {
+                    testSubmit = false;
+                    MessageBox.Show("Mot de passe invalide");
+                }
+            }
+        
+         
+            if (testSubmit)
+            {
+
+                AbonnementItem abonnement = (AbonnementItem)comboBoxSub.SelectedItem;
+                string resume = prenom + " " + nom + " " + courriel + " " +
+                                abonnement.Texte + " à " + abonnement.Valeur + "$.";
+
+
+                //soumission avec code :
+
+
+                MessageBox.Show(resume);
+
+                //On créé le compte
+                Compte nouveau = new Compte
+                {
+                    Prenom = prenom,
+                    Nom = nom,
+                    Courriel = courriel,
+                    MotDePasse = motDePasse,
+                    Abonnement = abonnement.ID
+                };
+                comptes.Add(nouveau);
+            }
 
         }
 
@@ -205,7 +263,7 @@ namespace Labo1_IFT215
 
             const int MIN_LENGTH = 12;
 
-            bool LengthValid = password.Length >= MIN_LENGTH;
+            bool LengthValid = (password.Length >= MIN_LENGTH);
 
             bool hasUpperCaseLetter = false;
             bool hasLowerCaseLetter = false;
@@ -243,6 +301,10 @@ namespace Labo1_IFT215
 
                     }
                 }
+                if (LengthValid)
+                {
+                    labelPasswordHelpLength.ForeColor = Color.Green;
+                }
                 }
             
             bool isValid = LengthValid
@@ -259,6 +321,8 @@ namespace Labo1_IFT215
             labelPasswordHelpMaj.ForeColor = Color.Red;
             labelPasswodHelpCarac.ForeColor = Color.Red;
             labelPasswordHelpNumber.ForeColor = Color.Red;
+            labelPasswordHelpLength.ForeColor = Color.Red;
+
 
             string password = textBoxPassword.Text;
             ValidatePassword(password);

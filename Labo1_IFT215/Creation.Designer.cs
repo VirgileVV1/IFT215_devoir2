@@ -40,6 +40,7 @@ namespace Labo1_IFT215
             this.textBoxMail = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.groupBoxAuth = new System.Windows.Forms.GroupBox();
+            this.labelPasswordHelpLength = new System.Windows.Forms.Label();
             this.labelPasswordHelpNumber = new System.Windows.Forms.Label();
             this.labelPasswodHelpCarac = new System.Windows.Forms.Label();
             this.labelPasswordHelpMaj = new System.Windows.Forms.Label();
@@ -142,6 +143,7 @@ namespace Labo1_IFT215
             // 
             // groupBoxAuth
             // 
+            this.groupBoxAuth.Controls.Add(this.labelPasswordHelpLength);
             this.groupBoxAuth.Controls.Add(this.labelPasswordHelpNumber);
             this.groupBoxAuth.Controls.Add(this.labelPasswodHelpCarac);
             this.groupBoxAuth.Controls.Add(this.labelPasswordHelpMaj);
@@ -159,31 +161,43 @@ namespace Labo1_IFT215
             this.groupBoxAuth.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBoxAuth.Location = new System.Drawing.Point(25, 136);
             this.groupBoxAuth.Name = "groupBoxAuth";
-            this.groupBoxAuth.Size = new System.Drawing.Size(870, 503);
+            this.groupBoxAuth.Size = new System.Drawing.Size(870, 604);
             this.groupBoxAuth.TabIndex = 9;
             this.groupBoxAuth.TabStop = false;
             this.groupBoxAuth.Text = "Renseignements d\'autentification";
             // 
+            // labelPasswordHelpLength
+            // 
+            this.labelPasswordHelpLength.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPasswordHelpLength.Location = new System.Drawing.Point(230, 469);
+            this.labelPasswordHelpLength.Name = "labelPasswordHelpLength";
+            this.labelPasswordHelpLength.Size = new System.Drawing.Size(537, 79);
+            this.labelPasswordHelpLength.TabIndex = 18;
+            this.labelPasswordHelpLength.Text = "Le mot de passe doit contenir au moins 12 caractères ";
+            // 
             // labelPasswordHelpNumber
             // 
             this.labelPasswordHelpNumber.AutoSize = true;
+            this.labelPasswordHelpNumber.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelPasswordHelpNumber.Location = new System.Drawing.Point(369, 429);
             this.labelPasswordHelpNumber.Name = "labelPasswordHelpNumber";
-            this.labelPasswordHelpNumber.Size = new System.Drawing.Size(69, 36);
+            this.labelPasswordHelpNumber.Size = new System.Drawing.Size(60, 30);
             this.labelPasswordHelpNumber.TabIndex = 17;
             this.labelPasswordHelpNumber.Text = "[0-9]";
             // 
             // labelPasswodHelpCarac
             // 
             this.labelPasswodHelpCarac.AutoSize = true;
+            this.labelPasswodHelpCarac.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelPasswodHelpCarac.Location = new System.Drawing.Point(434, 429);
             this.labelPasswodHelpCarac.Name = "labelPasswodHelpCarac";
-            this.labelPasswodHelpCarac.Size = new System.Drawing.Size(250, 36);
+            this.labelPasswodHelpCarac.Size = new System.Drawing.Size(212, 30);
             this.labelPasswodHelpCarac.TabIndex = 15;
             this.labelPasswodHelpCarac.Text = "[@,#, $, %, &, *, ;, :, ~.]";
             // 
             // labelPasswordHelpMaj
             // 
+            this.labelPasswordHelpMaj.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelPasswordHelpMaj.Location = new System.Drawing.Point(298, 429);
             this.labelPasswordHelpMaj.Name = "labelPasswordHelpMaj";
             this.labelPasswordHelpMaj.Size = new System.Drawing.Size(75, 40);
@@ -192,6 +206,7 @@ namespace Labo1_IFT215
             // 
             // labelPasswordHelpMin
             // 
+            this.labelPasswordHelpMin.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelPasswordHelpMin.Location = new System.Drawing.Point(232, 429);
             this.labelPasswordHelpMin.Name = "labelPasswordHelpMin";
             this.labelPasswordHelpMin.Size = new System.Drawing.Size(69, 40);
@@ -223,7 +238,7 @@ namespace Labo1_IFT215
             this.groupBoxSub.Controls.Add(this.labelSubType);
             this.groupBoxSub.Controls.Add(this.comboBoxSub);
             this.groupBoxSub.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBoxSub.Location = new System.Drawing.Point(25, 645);
+            this.groupBoxSub.Location = new System.Drawing.Point(25, 774);
             this.groupBoxSub.Name = "groupBoxSub";
             this.groupBoxSub.Size = new System.Drawing.Size(560, 150);
             this.groupBoxSub.TabIndex = 10;
@@ -251,7 +266,7 @@ namespace Labo1_IFT215
             // buttonSubmit
             // 
             this.buttonSubmit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonSubmit.Location = new System.Drawing.Point(255, 801);
+            this.buttonSubmit.Location = new System.Drawing.Point(701, 916);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(194, 39);
             this.buttonSubmit.TabIndex = 11;
@@ -263,7 +278,7 @@ namespace Labo1_IFT215
             // 
             this.linkLabelCode.AutoSize = true;
             this.linkLabelCode.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabelCode.Location = new System.Drawing.Point(627, 728);
+            this.linkLabelCode.Location = new System.Drawing.Point(919, 465);
             this.linkLabelCode.Name = "linkLabelCode";
             this.linkLabelCode.Size = new System.Drawing.Size(402, 28);
             this.linkLabelCode.TabIndex = 13;
@@ -273,7 +288,7 @@ namespace Labo1_IFT215
             // 
             // textBoxCode
             // 
-            this.textBoxCode.Location = new System.Drawing.Point(707, 774);
+            this.textBoxCode.Location = new System.Drawing.Point(1028, 565);
             this.textBoxCode.Name = "textBoxCode";
             this.textBoxCode.Size = new System.Drawing.Size(150, 55);
             this.textBoxCode.TabIndex = 14;
@@ -293,7 +308,7 @@ namespace Labo1_IFT215
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 868);
+            this.ClientSize = new System.Drawing.Size(1342, 967);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxCode);
             this.Controls.Add(this.linkLabelCode);
@@ -339,6 +354,7 @@ namespace Labo1_IFT215
         private System.Windows.Forms.Label labelPasswordHelpMaj;
         private System.Windows.Forms.Label labelPasswordHelpNumber;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelPasswordHelpLength;
     }
 }
 
