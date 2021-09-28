@@ -1,0 +1,7 @@
+C:\Users\NOUR\vsc\Labo1_IFT215\Labo1_IFT215\obj\Debug\net5.0-windows\Labo1_IFT215.FormDevoir2.resources
+C:\Users\NOUR\vsc\Labo1_IFT215\Labo1_IFT215\obj\Debug\net5.0-windows\Pro-Gramme.Properties.Resources.resources
+C:\Users\NOUR\vsc\Labo1_IFT215\Labo1_IFT215\obj\Debug\net5.0-windows\Pro-Gramme.csproj.GenerateResource.cache
+C:\Users\NOUR\vsc\Labo1_IFT215\Labo1_IFT215\obj\Debug\net5.0-windows\Pro-Gramme.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NOUR\vsc\Labo1_IFT215\Labo1_IFT215\obj\Debug\net5.0-windows\Pro-Gramme.AssemblyInfoInputs.cache
+C:\Users\NOUR\vsc\Labo1_IFT215\Labo1_IFT215\obj\Debug\net5.0-windows\Pro-Gramme.AssemblyInfo.cs
+C:\Users\NOUR\vsc\Labo1_IFT215\Labo1_IFT215\obj\Debug\net5.0-windows\Pro-Gramme.csproj.CoreCompileInputs.cache

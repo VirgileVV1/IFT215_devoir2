@@ -15,5 +15,5 @@ C:\Users\NOUR\vsc\Labo1_IFT215\Labo1_IFT215\obj\Debug\net5.0-windows\Labo1_IFT21
 C:\Users\NOUR\vsc\Labo1_IFT215\Labo1_IFT215\obj\Debug\net5.0-windows\ref\Labo1_IFT215.dll
 C:\Users\NOUR\vsc\Labo1_IFT215\Labo1_IFT215\obj\Debug\net5.0-windows\Labo1_IFT215.pdb
 C:\Users\NOUR\vsc\Labo1_IFT215\Labo1_IFT215\obj\Debug\net5.0-windows\Labo1_IFT215.genruntimeconfig.cache
-C:\Users\NOUR\vsc\Labo1_IFT215\Labo1_IFT215\obj\Debug\net5.0-windows\Labo1_IFT215.FormDevoir2.resources
 C:\Users\NOUR\vsc\Labo1_IFT215\Labo1_IFT215\obj\Debug\net5.0-windows\Labo1_IFT215.Properties.Resources.resources
+C:\Users\NOUR\vsc\Labo1_IFT215\Labo1_IFT215\obj\Debug\net5.0-windows\Labo1_IFT215.FormCreation.resources

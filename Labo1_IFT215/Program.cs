@@ -17,7 +17,7 @@ namespace Labo1_IFT215
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormDevoir2());
+            Application.Run(new FormCreation());
         }
     }
 }

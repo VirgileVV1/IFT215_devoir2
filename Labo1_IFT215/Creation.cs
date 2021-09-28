@@ -11,18 +11,19 @@ using System.Windows.Forms;
 
 namespace Labo1_IFT215
 {
-    public partial class FormDevoir2 : Form
+    public partial class FormCreation : Form
     {
         // Variables globales
         List<Compte> comptes;
 
-        public FormDevoir2()
+        public FormCreation()
         {
             InitializeComponent();
             InitMyComponents();
             labelMailHelp.Visible = false;
             CreerCompte();
             textBoxMail.TextChanged += CourrielChange;
+            textBoxPassword.TextChanged += passwordChange;
 
         }
 
@@ -47,6 +48,7 @@ namespace Labo1_IFT215
          */
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
+            //soumission avec email
             string prenom = textBoxFirstName.Text;
             string nom = textBoxName.Text;
             string courriel = textBoxMail.Text;
@@ -56,8 +58,13 @@ namespace Labo1_IFT215
             string resume = prenom + " " + nom + " " + courriel + " " +
                             abonnement.Texte + " à " + abonnement.Valeur + "$.";
 
+
+            //soumission avec code :
+          
+
             MessageBox.Show(resume);
 
+            //On créé le compte
             Compte nouveau = new Compte
             {
                 Prenom = prenom,
@@ -157,7 +164,7 @@ namespace Labo1_IFT215
                 Abonnement = 0
             });
         }
-       
+
 
         /*
          * Action lors de l'appui du clic de la souris
@@ -174,7 +181,7 @@ namespace Labo1_IFT215
         {
             textBoxPassword.UseSystemPasswordChar = false;
         }
-        
+
         /*
          * Action lors du clic sur l'hyperlien
          */
@@ -182,7 +189,76 @@ namespace Labo1_IFT215
         {
             textBoxCode.Visible = true;
         }
+
+        private bool ValidatePassword(string password)
+        {
+
+            const int MIN_LENGTH = 12;
+
+            bool LengthValid = password.Length >= MIN_LENGTH;
+
+            bool hasUpperCaseLetter = false;
+            bool hasLowerCaseLetter = false;
+            bool hasDecimalDigit = false;
+            var hasSymbols = new Regex(@"[!@#$%^&*;:~.]");
+            var hasUpper = new Regex(@"[a-z]");
+            var hasLower = new Regex(@"[A-Z]");
+          
+                foreach (char c in password)
+                {
+                if (char.IsUpper(c))
+                {
+                    hasUpperCaseLetter = true;
+                    labelPasswordHelpMaj.ForeColor = Color.Green;
+
+                }
+                else if (char.IsLower(c) == true)
+                {
+                    hasLowerCaseLetter = true;
+                    labelPasswordHelpMin.ForeColor = Color.Green;
+                }
+               
+                else if (char.IsDigit(c))
+                {
+                    hasDecimalDigit = true;
+                    labelPasswordHelpNumber.ForeColor = Color.Green;
+                }
+                else if (hasSymbols.IsMatch(password))
+                {
+                    labelPasswodHelpCarac.ForeColor = Color.Green;
+                }
+                }
+            
+            bool isValid = LengthValid
+              && hasUpperCaseLetter
+              && hasLowerCaseLetter
+              && hasDecimalDigit
+              && hasSymbols.IsMatch(password);
+              ;
+            return isValid;
+        }
+        private void passwordChange(object sender, EventArgs e)
+        {
+            labelPasswordHelpMin.ForeColor = Color.Red;
+            labelPasswordHelpMaj.ForeColor = Color.Red;
+            labelPasswodHelpCarac.ForeColor = Color.Red;
+            labelPasswordHelpNumber.ForeColor = Color.Red;
+
+            string password = textBoxPassword.Text;
+            ValidatePassword(password);
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            FormCreation form = new FormCreation();
+            form.Show();
+        }
+
+
     }
+     
 
 }
-

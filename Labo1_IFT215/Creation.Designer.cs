@@ -1,7 +1,7 @@
 ﻿
 namespace Labo1_IFT215
 {
-    partial class FormDevoir2
+    partial class FormCreation
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@ namespace Labo1_IFT215
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDevoir2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreation));
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelFirstName = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
@@ -40,6 +40,10 @@ namespace Labo1_IFT215
             this.textBoxMail = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.groupBoxAuth = new System.Windows.Forms.GroupBox();
+            this.labelPasswordHelpNumber = new System.Windows.Forms.Label();
+            this.labelPasswodHelpCarac = new System.Windows.Forms.Label();
+            this.labelPasswordHelpMaj = new System.Windows.Forms.Label();
+            this.labelPasswordHelpMin = new System.Windows.Forms.Label();
             this.buttonVisiblePassword = new System.Windows.Forms.Button();
             this.labelMailHelp = new System.Windows.Forms.Label();
             this.groupBoxSub = new System.Windows.Forms.GroupBox();
@@ -48,6 +52,7 @@ namespace Labo1_IFT215
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.linkLabelCode = new System.Windows.Forms.LinkLabel();
             this.textBoxCode = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxAuth.SuspendLayout();
             this.groupBoxSub.SuspendLayout();
             this.SuspendLayout();
@@ -107,36 +112,40 @@ namespace Labo1_IFT215
             this.textBoxFirstName.Location = new System.Drawing.Point(232, 92);
             this.textBoxFirstName.Multiline = true;
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(281, 35);
-            this.textBoxFirstName.TabIndex = 5;
+            this.textBoxFirstName.Size = new System.Drawing.Size(407, 43);
+            this.textBoxFirstName.TabIndex = 8;
             // 
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(232, 164);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(281, 35);
-            this.textBoxName.TabIndex = 6;
+            this.textBoxName.Size = new System.Drawing.Size(407, 43);
+            this.textBoxName.TabIndex = 8;
             // 
             // textBoxMail
             // 
-            this.textBoxMail.Location = new System.Drawing.Point(232, 242);
+            this.textBoxMail.Location = new System.Drawing.Point(232, 234);
             this.textBoxMail.Multiline = true;
             this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(281, 35);
-            this.textBoxMail.TabIndex = 7;
+            this.textBoxMail.Size = new System.Drawing.Size(407, 43);
+            this.textBoxMail.TabIndex = 8;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(232, 369);
+            this.textBoxPassword.Location = new System.Drawing.Point(232, 368);
             this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(281, 42);
+            this.textBoxPassword.Size = new System.Drawing.Size(452, 43);
             this.textBoxPassword.TabIndex = 8;
             // 
             // groupBoxAuth
             // 
+            this.groupBoxAuth.Controls.Add(this.labelPasswordHelpNumber);
+            this.groupBoxAuth.Controls.Add(this.labelPasswodHelpCarac);
+            this.groupBoxAuth.Controls.Add(this.labelPasswordHelpMaj);
+            this.groupBoxAuth.Controls.Add(this.labelPasswordHelpMin);
             this.groupBoxAuth.Controls.Add(this.buttonVisiblePassword);
             this.groupBoxAuth.Controls.Add(this.labelMailHelp);
             this.groupBoxAuth.Controls.Add(this.labelFirstName);
@@ -148,17 +157,51 @@ namespace Labo1_IFT215
             this.groupBoxAuth.Controls.Add(this.labelPassword);
             this.groupBoxAuth.Controls.Add(this.textBoxFirstName);
             this.groupBoxAuth.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBoxAuth.Location = new System.Drawing.Point(25, 135);
+            this.groupBoxAuth.Location = new System.Drawing.Point(25, 136);
             this.groupBoxAuth.Name = "groupBoxAuth";
-            this.groupBoxAuth.Size = new System.Drawing.Size(587, 417);
+            this.groupBoxAuth.Size = new System.Drawing.Size(870, 503);
             this.groupBoxAuth.TabIndex = 9;
             this.groupBoxAuth.TabStop = false;
             this.groupBoxAuth.Text = "Renseignements d\'autentification";
             // 
+            // labelPasswordHelpNumber
+            // 
+            this.labelPasswordHelpNumber.AutoSize = true;
+            this.labelPasswordHelpNumber.Location = new System.Drawing.Point(369, 429);
+            this.labelPasswordHelpNumber.Name = "labelPasswordHelpNumber";
+            this.labelPasswordHelpNumber.Size = new System.Drawing.Size(69, 36);
+            this.labelPasswordHelpNumber.TabIndex = 17;
+            this.labelPasswordHelpNumber.Text = "[0-9]";
+            // 
+            // labelPasswodHelpCarac
+            // 
+            this.labelPasswodHelpCarac.AutoSize = true;
+            this.labelPasswodHelpCarac.Location = new System.Drawing.Point(434, 429);
+            this.labelPasswodHelpCarac.Name = "labelPasswodHelpCarac";
+            this.labelPasswodHelpCarac.Size = new System.Drawing.Size(250, 36);
+            this.labelPasswodHelpCarac.TabIndex = 15;
+            this.labelPasswodHelpCarac.Text = "[@,#, $, %, &, *, ;, :, ~.]";
+            // 
+            // labelPasswordHelpMaj
+            // 
+            this.labelPasswordHelpMaj.Location = new System.Drawing.Point(298, 429);
+            this.labelPasswordHelpMaj.Name = "labelPasswordHelpMaj";
+            this.labelPasswordHelpMaj.Size = new System.Drawing.Size(75, 40);
+            this.labelPasswordHelpMaj.TabIndex = 16;
+            this.labelPasswordHelpMaj.Text = "[A-Z]";
+            // 
+            // labelPasswordHelpMin
+            // 
+            this.labelPasswordHelpMin.Location = new System.Drawing.Point(232, 429);
+            this.labelPasswordHelpMin.Name = "labelPasswordHelpMin";
+            this.labelPasswordHelpMin.Size = new System.Drawing.Size(69, 40);
+            this.labelPasswordHelpMin.TabIndex = 15;
+            this.labelPasswordHelpMin.Text = "[a-z]";
+            // 
             // buttonVisiblePassword
             // 
             this.buttonVisiblePassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonVisiblePassword.BackgroundImage")));
-            this.buttonVisiblePassword.Location = new System.Drawing.Point(531, 368);
+            this.buttonVisiblePassword.Location = new System.Drawing.Point(717, 366);
             this.buttonVisiblePassword.Name = "buttonVisiblePassword";
             this.buttonVisiblePassword.Size = new System.Drawing.Size(50, 45);
             this.buttonVisiblePassword.TabIndex = 9;
@@ -169,9 +212,9 @@ namespace Labo1_IFT215
             // labelMailHelp
             // 
             this.labelMailHelp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMailHelp.Location = new System.Drawing.Point(230, 276);
+            this.labelMailHelp.Location = new System.Drawing.Point(230, 293);
             this.labelMailHelp.Name = "labelMailHelp";
-            this.labelMailHelp.Size = new System.Drawing.Size(283, 35);
+            this.labelMailHelp.Size = new System.Drawing.Size(409, 35);
             this.labelMailHelp.TabIndex = 12;
             this.labelMailHelp.Text = "Adresse e-mail invalide";
             // 
@@ -180,7 +223,7 @@ namespace Labo1_IFT215
             this.groupBoxSub.Controls.Add(this.labelSubType);
             this.groupBoxSub.Controls.Add(this.comboBoxSub);
             this.groupBoxSub.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBoxSub.Location = new System.Drawing.Point(25, 573);
+            this.groupBoxSub.Location = new System.Drawing.Point(25, 645);
             this.groupBoxSub.Name = "groupBoxSub";
             this.groupBoxSub.Size = new System.Drawing.Size(560, 150);
             this.groupBoxSub.TabIndex = 10;
@@ -236,11 +279,22 @@ namespace Labo1_IFT215
             this.textBoxCode.TabIndex = 14;
             this.textBoxCode.Visible = false;
             // 
-            // FormDevoir2
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(995, 230);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 70);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // FormCreation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 868);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxCode);
             this.Controls.Add(this.linkLabelCode);
             this.Controls.Add(this.buttonSubmit);
@@ -249,7 +303,7 @@ namespace Labo1_IFT215
             this.Controls.Add(this.labelTitle);
             this.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "FormDevoir2";
+            this.Name = "FormCreation";
             this.Text = "Création d\'un compte Pro-Gramme";
             this.groupBoxAuth.ResumeLayout(false);
             this.groupBoxAuth.PerformLayout();
@@ -280,6 +334,11 @@ namespace Labo1_IFT215
         private System.Windows.Forms.Button buttonVisiblePassword;
         private System.Windows.Forms.LinkLabel linkLabelCode;
         private System.Windows.Forms.TextBox textBoxCode;
+        private System.Windows.Forms.Label labelPasswordHelpMin;
+        private System.Windows.Forms.Label labelPasswodHelpCarac;
+        private System.Windows.Forms.Label labelPasswordHelpMaj;
+        private System.Windows.Forms.Label labelPasswordHelpNumber;
+        private System.Windows.Forms.Button button1;
     }
 }
 
