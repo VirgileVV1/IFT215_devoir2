@@ -97,10 +97,11 @@ namespace Labo1_IFT215
         /*
          * Action lors de la modification de la textbox de l'e-mail
          */
+        int cptCar = 0;
         private void CourrielChange(object sender, EventArgs e)
         {
+            cptCar++;
             string email = textBoxMail.Text;
-
             //Verification du format de l'adresse mail
             if (IsEmailAddressValid(email))
             {
@@ -108,25 +109,34 @@ namespace Labo1_IFT215
                 //verification de l'adresse email parmis les comptes existants
                 if (compteExistant != null)
                 {
-                    textBoxMail.BackColor = Color.Coral;
+                    textBoxMail.BackColor = Color.Red;
                     //labelMailExist.Visible = true;
                     //labelMailExist.ForeColor = Color.Coral;
                     labelMailHelp.Text = "Cette adresse e-mail possède déjà un compte";
-                    labelMailHelp.ForeColor = Color.Coral;
+                    labelMailHelp.ForeColor = Color.Red;
                 }
                 else
                 {
-                    textBoxMail.BackColor = Color.Aquamarine;
+                    textBoxMail.BackColor = Color.Green;
                     labelMailHelp.Text = "Format correct";
+                    labelMailHelp.ForeColor = Color.Green;
+
                     //labelMailHelp.Visible = false;
                     //labelMailExist.Visible = false;
                 }
             }
             else
             {
-                textBoxMail.BackColor = Color.Coral;
+                textBoxMail.BackColor = Color.Red;
+                labelMailHelp.Text = "Format incorrect";
                 labelMailHelp.Visible = true;
-                labelMailHelp.ForeColor = Color.Coral;
+                labelMailHelp.ForeColor = Color.Red;
+            }
+            if(textBoxMail.Text == "")
+            {
+                labelMailHelp.Visible = false;
+                textBoxMail.BackColor = Color.White;
+
             }
         }
 
@@ -203,6 +213,7 @@ namespace Labo1_IFT215
             var hasSymbols = new Regex(@"[!@#$%^&*;:~.]");
             var hasUpper = new Regex(@"[a-z]");
             var hasLower = new Regex(@"[A-Z]");
+            var nbCaractere = 0;
           
                 foreach (char c in password)
                 {
@@ -225,7 +236,12 @@ namespace Labo1_IFT215
                 }
                 else if (hasSymbols.IsMatch(password))
                 {
-                    labelPasswodHelpCarac.ForeColor = Color.Green;
+                    nbCaractere++;
+                    if (nbCaractere >= 2) {
+                       
+                        labelPasswodHelpCarac.ForeColor = Color.Green;
+
+                    }
                 }
                 }
             
