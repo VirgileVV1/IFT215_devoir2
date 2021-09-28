@@ -4,5 +4,8 @@
     <Compile Update="Creation.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

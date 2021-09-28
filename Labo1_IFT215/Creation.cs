@@ -253,11 +253,11 @@ namespace Labo1_IFT215
         private void button1_Click(object sender, EventArgs e)
         {
             
-            FormCreation form = new FormCreation();
-            form.Show();
+            FormNotification formNotif = new FormNotification();
+            formNotif.Show();
         }
 
-
+  
     }
      
 

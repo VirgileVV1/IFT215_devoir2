@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\NOUR\\vsc\\Labo1_IFT215\\Labo1_IFT215\\Labo1_IFT215.csproj": {}
+    "U:\\ift215\\devoir2\\IFT215_devoir2\\Labo1_IFT215\\Labo1_IFT215.csproj": {}
   },
   "projects": {
-    "C:\\Users\\NOUR\\vsc\\Labo1_IFT215\\Labo1_IFT215\\Labo1_IFT215.csproj": {
+    "U:\\ift215\\devoir2\\IFT215_devoir2\\Labo1_IFT215\\Labo1_IFT215.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NOUR\\vsc\\Labo1_IFT215\\Labo1_IFT215\\Labo1_IFT215.csproj",
+        "projectUniqueName": "U:\\ift215\\devoir2\\IFT215_devoir2\\Labo1_IFT215\\Labo1_IFT215.csproj",
         "projectName": "Labo1_IFT215",
-        "projectPath": "C:\\Users\\NOUR\\vsc\\Labo1_IFT215\\Labo1_IFT215\\Labo1_IFT215.csproj",
-        "packagesPath": "C:\\Users\\NOUR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NOUR\\vsc\\Labo1_IFT215\\Labo1_IFT215\\obj\\",
+        "projectPath": "U:\\ift215\\devoir2\\IFT215_devoir2\\Labo1_IFT215\\Labo1_IFT215.csproj",
+        "packagesPath": "C:\\Users\\valv0701\\.nuget\\packages\\",
+        "outputPath": "U:\\ift215\\devoir2\\IFT215_devoir2\\Labo1_IFT215\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\NOUR\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\valv0701\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
