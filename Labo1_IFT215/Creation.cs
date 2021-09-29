@@ -13,9 +13,13 @@ namespace Labo1_IFT215
 {
     public partial class FormCreation : Form
     {
-        // Variables globales
+        // - Variables globales -
+        //Liste des comptes qui se sont inscrit au Pro-Gramme
         List<Compte> comptes;
 
+        /**
+         * Methode appelée au lancement du formCreation
+         */
         public FormCreation()
         {
             InitializeComponent();
@@ -27,7 +31,7 @@ namespace Labo1_IFT215
 
         }
 
-        /*
+        /**
          * Initialise les valeurs de la combo box d'abonnement
          */
         private void InitMyComponents()
@@ -43,12 +47,12 @@ namespace Labo1_IFT215
 
         }
 
-        /*
+        /**
          * Action lors du clic sur le bouton "soumettre"
          */
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            //soumission avec email
+            // --- soumission avec email ---
             string prenom = textBoxFirstName.Text;
             string nom = textBoxName.Text;
             string courriel = textBoxMail.Text;
@@ -116,12 +120,13 @@ namespace Labo1_IFT215
                                 abonnement.Texte + " à " + abonnement.Valeur + "$.";
 
 
-                //soumission avec code :
-
+                // --- soumission avec code : ---
+                /*si la txb pour le code n'est pas vide alors on a juste
+                 a verifier si il y a un nom et un prenom*/
 
                 MessageBox.Show(resume);
 
-                //On créé le compte
+                //Si tout s'est bien passé, on créé le compte et on l'ajoute a la liste "comptes"
                 Compte nouveau = new Compte
                 {
                     Prenom = prenom,
@@ -135,7 +140,7 @@ namespace Labo1_IFT215
 
         }
 
-        /*
+        /**
          * Methode de verification de l'adresse e-mail
          */
         public bool IsEmailAddressValid(string email)
@@ -152,7 +157,7 @@ namespace Labo1_IFT215
             }
         }
 
-        /*
+        /**
          * Action lors de la modification de la textbox de l'e-mail
          */
         int cptCar = 0;
@@ -160,16 +165,14 @@ namespace Labo1_IFT215
         {
             cptCar++;
             string email = textBoxMail.Text;
-            //Verification du format de l'adresse mail
+            // verification du format de l'adresse mail
             if (IsEmailAddressValid(email))
             {
                 var compteExistant = comptes.FirstOrDefault(o => o.Courriel == email);
-                //verification de l'adresse email parmis les comptes existants
+                // verification de l'adresse email parmis les comptes existants
                 if (compteExistant != null)
                 {
                     textBoxMail.BackColor = Color.Red;
-                    //labelMailExist.Visible = true;
-                    //labelMailExist.ForeColor = Color.Coral;
                     labelMailHelp.Text = "Cette adresse e-mail possède déjà un compte";
                     labelMailHelp.ForeColor = Color.Red;
                 }
@@ -179,8 +182,6 @@ namespace Labo1_IFT215
                     labelMailHelp.Text = "Format correct";
                     labelMailHelp.ForeColor = Color.Green;
 
-                    //labelMailHelp.Visible = false;
-                    //labelMailExist.Visible = false;
                 }
             }
             else
@@ -198,8 +199,8 @@ namespace Labo1_IFT215
             }
         }
 
-        /*
-         * Methode de création de compte 
+        /**
+         * Création de compte par défaut
          */
         private void CreerCompte()
         {
@@ -234,30 +235,36 @@ namespace Labo1_IFT215
         }
 
 
-        /*
-         * Action lors de l'appui du clic de la souris
-         **/
+        /**
+         * Action lors de l'appui sur le clic de la souris
+         */
         public void buttonVisiblePassword_MouseDown(object sender, EventArgs e)
         {
             textBoxPassword.UseSystemPasswordChar = true;
         }
 
-        /*
+        /**
          * Action lors du relachement du clic de la souris
-         **/
+         */
         public void buttonVisiblePassword_MouseUp(object sender, EventArgs e)
         {
             textBoxPassword.UseSystemPasswordChar = false;
         }
 
-        /*
+        /**
          * Action lors du clic sur l'hyperlien
          */
         private void linkLabelCode_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            // on fait apparaitre une textbox pour permettre a l'utilisateur de rentrer son code
             textBoxCode.Visible = true;
         }
 
+        /**
+         * Methode permettant de vérifier si le mdp est au bon format
+         * Modifie la couleur des labels pour permettre a l'utilisateur de voir ce qu'il lui manque
+         * @return 1 si le mot de passe est au bon format, 0 sinon
+         */
         private bool ValidatePassword(string password)
         {
 
@@ -315,6 +322,10 @@ namespace Labo1_IFT215
               ;
             return isValid;
         }
+
+        /**
+         * Action lors de la modification du text de la textBoxPassword 
+         */
         private void passwordChange(object sender, EventArgs e)
         {
             labelPasswordHelpMin.ForeColor = Color.Red;
@@ -326,8 +337,6 @@ namespace Labo1_IFT215
 
             string password = textBoxPassword.Text;
             ValidatePassword(password);
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
