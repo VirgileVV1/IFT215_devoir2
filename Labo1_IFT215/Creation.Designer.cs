@@ -64,7 +64,7 @@ namespace Labo1_IFT215
             this.labelTitle.Location = new System.Drawing.Point(370, 58);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(364, 48);
+            this.labelTitle.Size = new System.Drawing.Size(247, 32);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Création d\'un compte";
             // 
@@ -74,7 +74,7 @@ namespace Labo1_IFT215
             this.labelFirstName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelFirstName.Location = new System.Drawing.Point(124, 101);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(80, 28);
+            this.labelFirstName.Size = new System.Drawing.Size(57, 19);
             this.labelFirstName.TabIndex = 1;
             this.labelFirstName.Text = "Prénom";
             // 
@@ -84,7 +84,7 @@ namespace Labo1_IFT215
             this.labelName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelName.Location = new System.Drawing.Point(148, 171);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(56, 28);
+            this.labelName.Size = new System.Drawing.Size(39, 19);
             this.labelName.TabIndex = 2;
             this.labelName.Text = "Nom";
             // 
@@ -94,7 +94,7 @@ namespace Labo1_IFT215
             this.labelMail.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelMail.Location = new System.Drawing.Point(53, 249);
             this.labelMail.Name = "labelMail";
-            this.labelMail.Size = new System.Drawing.Size(151, 28);
+            this.labelMail.Size = new System.Drawing.Size(106, 19);
             this.labelMail.TabIndex = 3;
             this.labelMail.Text = "Adresse courriel";
             // 
@@ -104,7 +104,7 @@ namespace Labo1_IFT215
             this.labelPassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelPassword.Location = new System.Drawing.Point(75, 368);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(129, 28);
+            this.labelPassword.Size = new System.Drawing.Size(92, 19);
             this.labelPassword.TabIndex = 4;
             this.labelPassword.Text = "Mot de passe";
             // 
@@ -181,7 +181,7 @@ namespace Labo1_IFT215
             this.labelPasswordHelpNumber.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelPasswordHelpNumber.Location = new System.Drawing.Point(369, 429);
             this.labelPasswordHelpNumber.Name = "labelPasswordHelpNumber";
-            this.labelPasswordHelpNumber.Size = new System.Drawing.Size(60, 30);
+            this.labelPasswordHelpNumber.Size = new System.Drawing.Size(49, 25); //60 30
             this.labelPasswordHelpNumber.TabIndex = 17;
             this.labelPasswordHelpNumber.Text = "[0-9]";
             // 
@@ -191,7 +191,7 @@ namespace Labo1_IFT215
             this.labelPasswodHelpCarac.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelPasswodHelpCarac.Location = new System.Drawing.Point(434, 429);
             this.labelPasswodHelpCarac.Name = "labelPasswodHelpCarac";
-            this.labelPasswodHelpCarac.Size = new System.Drawing.Size(212, 30);
+            this.labelPasswodHelpCarac.Size = new System.Drawing.Size(174, 25); //212 30
             this.labelPasswodHelpCarac.TabIndex = 15;
             this.labelPasswodHelpCarac.Text = "[@,#, $, %, &, *, ;, :, ~.]";
             // 
@@ -251,7 +251,7 @@ namespace Labo1_IFT215
             this.labelSubType.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelSubType.Location = new System.Drawing.Point(18, 75);
             this.labelSubType.Name = "labelSubType";
-            this.labelSubType.Size = new System.Drawing.Size(186, 28);
+            this.labelSubType.Size = new System.Drawing.Size(130, 19);
             this.labelSubType.TabIndex = 1;
             this.labelSubType.Text = "Type d\'abonnement";
             // 
@@ -260,7 +260,7 @@ namespace Labo1_IFT215
             this.comboBoxSub.FormattingEnabled = true;
             this.comboBoxSub.Location = new System.Drawing.Point(257, 66);
             this.comboBoxSub.Name = "comboBoxSub";
-            this.comboBoxSub.Size = new System.Drawing.Size(240, 44);
+            this.comboBoxSub.Size = new System.Drawing.Size(240, 31);
             this.comboBoxSub.TabIndex = 0;
             // 
             // buttonSubmit
@@ -280,7 +280,7 @@ namespace Labo1_IFT215
             this.linkLabelCode.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabelCode.Location = new System.Drawing.Point(919, 465);
             this.linkLabelCode.Name = "linkLabelCode";
-            this.linkLabelCode.Size = new System.Drawing.Size(402, 28);
+            this.linkLabelCode.Size = new System.Drawing.Size(280, 19);
             this.linkLabelCode.TabIndex = 13;
             this.linkLabelCode.TabStop = true;
             this.linkLabelCode.Text = "Vous avez un code d\'activation  ? (cliquez ici)";
@@ -290,7 +290,7 @@ namespace Labo1_IFT215
             // 
             this.textBoxCode.Location = new System.Drawing.Point(1028, 565);
             this.textBoxCode.Name = "textBoxCode";
-            this.textBoxCode.Size = new System.Drawing.Size(150, 55);
+            this.textBoxCode.Size = new System.Drawing.Size(150, 39);
             this.textBoxCode.TabIndex = 14;
             this.textBoxCode.Visible = false;
             // 
@@ -306,7 +306,7 @@ namespace Labo1_IFT215
             // 
             // FormCreation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1342, 967);
             this.Controls.Add(this.button1);
